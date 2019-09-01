@@ -1,14 +1,10 @@
-import string
-import random
 class User:
     """
     class that generates new instnaces of  users
     """
     user_list=[]
 
-    def passGen(self,size = 8, char=string.ascii_uppercase + string.ascii_lowercase + string.digits):
-        gen = ''.join(random.choice(char) for _ in range(size))
-        return gen
+   
 
 
     def __init__ (self,User_name,password,email,account_name):
@@ -32,3 +28,8 @@ class User:
         '''
         User.user_list.append(self)
 
+    def delete_user(self):
+        '''
+        delete_user method deletes user objects from user_list
+        '''
+        User.user_list.remove(self)
