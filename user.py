@@ -33,3 +33,11 @@ class User:
         delete_user method deletes user objects from user_list
         '''
         User.user_list.remove(self)
+
+
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.user_list
