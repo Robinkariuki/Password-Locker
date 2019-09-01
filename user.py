@@ -16,7 +16,8 @@ class User:
              password: New user password.
              email: New user email.
         """
-        self.account_name: account_name
-        self.User_name: User_name
-        self.password: password
-        self.email: email     
+
+        self.account_name = account_name
+        self.User_name = User_name
+        self.password = password
+        self.email = email     
