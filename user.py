@@ -2,7 +2,7 @@ class User:
     """
     class that generates new instnaces of  users
     """
-    User_list=[]
+    user_list=[]
 
    
 
@@ -21,3 +21,11 @@ class User:
         self.User_name = User_name
         self.password = password
         self.email = email     
+    
+    def save_user(self):
+        '''
+        save_user method saves user objects into user_list
+        '''
+        User.user_list.append(self)
+
+        
