@@ -35,3 +35,10 @@ def check_existing_users(number);
     
     '''
     return User.user_exist(number)
+
+def display_user():
+    '''
+    Function that returns all the saved users
+
+    '''
+    return User.display_users()
