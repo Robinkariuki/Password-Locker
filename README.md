@@ -16,7 +16,7 @@ Password Locker is an app that allows users to store their password and also man
 
 -run python3.7 run.py
 
--run python3.7 user_test.py 
+-run python3.7 password_test.py 
 
 ## Technologies used
 
