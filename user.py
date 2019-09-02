@@ -7,20 +7,21 @@ class User:
    
 
 
-    def __init__ (self,User_name,password,email,account_name):
+    def __init__ (self,first_name,last_name,number,email,password):
         """
         __init__ method helps us to define properties of our objects.
         Args:
-             account_name: New user account name.
-             User_name: New user name.
+             first_name: New user first name.
+             last_name New user last name.
+             number: New user number.
              password: New user password.
-             email: New user email.
         """
 
-        self.account_name = account_name
-        self.User_name = User_name
-        self.password = password
-        self.email = email     
+        self.first_name = first_name
+        self.last_name = last_name
+        self.number = number
+        self.email = email  
+        self.password = password   
     
     def save_user(self):
         '''
@@ -34,28 +35,19 @@ class User:
         '''
         User.user_list.remove(self)
 
-
     @classmethod
-    def display_users(cls):
-        '''
-        method that returns the user list
-        '''
-        return cls.user_list
+    def find_by _number(cls,number):
 
-
-class credentails:
-        """
-        Class that generates new instances of Credentials
-        """
-        accounts=[]
-def __init__(self,accountusername,accountname,accountpassword):
-        """
-        __init__ method that helps us define properties for our objectsself.
+         '''
+        Method that takes in a number and returns a user that matches that number.
         Args:
-        accountusername: New Credentials accountusername
-        accountname: New Credentials accountname
-        accountpassword: New Credentials accountpassword
-        """
-        self.accountusername= accountusername
-        self.accountname = accountname
-        self.accountpassword = accountpassword
+            number: Phone number to search for
+        Returns :
+            User of person that matches the number.
+        '''
+        for user in cls.user_list:
+            if user.phone_number == number:
+                return user
+                
+
+
