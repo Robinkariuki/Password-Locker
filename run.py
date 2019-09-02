@@ -42,3 +42,89 @@ def display_user():
 
     '''
     return User.display_users()
+
+def  main():
+    print("Hello welcome to your user list. what is your name?")
+    user_name =input()
+    print(f"Hello {user.name}. what would you like to do?")
+    print ('\n')
+
+    while True:
+        list =('''
+        1-Create new account
+        2-Display accounts
+        3-Search for accounts
+        4-Exit password-Locker
+        ''')
+        print(list)
+        print("Use these short codes : 1 - craete a new user , 2 - display users, 3 -find a user, 4 -exit the password locker ")
+
+        short_code =input().lower()
+
+        if short_code == '1':
+            print("New User")
+            print("-"*10)
+
+            print ("First name ...")
+            f_name = input()
+
+            print ("Last name ...")
+            l_name = input()
+
+            print("phone number ...")
+            p_number = input()
+
+            print("Email address ...")
+            e_address = input()
+
+            print("password ...")
+            password = input()
+
+            print("confirm password ...")
+            password1 = input() 
+
+            save_users(create_user(f_name,l_name,p_number,e_address,password))
+            print ('\n')
+            print(f"New User {f_name} {l_name} created")
+            print ('\n')
+
+        elif short_code == '2':
+
+            if display_users():
+                print("Here is a list of all your users")
+                print('\n')
+
+                for user in display_user():
+                    print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
+
+                    print('\n')
+                else:
+                    print('\n')
+
+                    print('\n')
+
+        elif short_code == '3':
+
+            print("Enter the number you want to search for")
+
+            search_number = input()
+            if checking_existing_users(search_number):
+                search_user = find_user(search_number)
+                print(f"{search_user.first_name} {search_user.last_name}")
+                print('-' * 20)
+
+                print(f"phone number.........{search_user.phone_number}")
+                print(f"Email address.........{search_user.email}")
+            else:
+                print("That user does not exist")
+
+        elif short_code == "4":
+            print("Bye .....")
+            break
+        else:
+            print("I really didn't get that. please use the short codes ")    
+
+
+if __name__ == '__main__':
+
+    main()                        
