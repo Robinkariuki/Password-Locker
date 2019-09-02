@@ -38,9 +38,9 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by _number(cls,number):
+    def find_by_number(cls,number):
 
-         '''
+        '''
         Method that takes in a number and returns a user that matches that number.
         Args:
             number: Phone number to search for
@@ -54,7 +54,7 @@ class User:
 
     @classmethod
     def user_exist(cls,number):
-         '''
+        '''
         Method that checks if a user exists from the user list.
         Args:
             number: Phone number to search if it exists
@@ -77,7 +77,7 @@ class User:
 
     @classmethod
     def copy_email(cls,number):
-        user_found = user.find_by_number(number) 
+        user_found = User.find_by_number(number) 
         pyperclip.copy(user_found.email)   
 
 
