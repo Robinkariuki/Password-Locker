@@ -10,7 +10,7 @@ def create_user(fname,lname,phone,email,password):
     new_user = User(fname,lname,phone,email,password)
     return new_user
 
-def save_user(user):
+def save_users(user):
     '''
     Function to save user
     '''
@@ -83,7 +83,7 @@ def  main():
             print("confirm password ...")
             password = input() 
 
-            save_user(create_user(f_name,l_name,p_number,e_address,password))
+            save_users(create_user(f_name,l_name,p_number,e_address,password))
             print ('\n')
             print(f"New User {f_name} {l_name} created")
             print ('\n')
