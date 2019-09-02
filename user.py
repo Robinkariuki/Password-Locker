@@ -1,3 +1,5 @@
+import pyperclip
+
 class User:
     """
     class that generates new instnaces of  users
@@ -72,7 +74,12 @@ class User:
 
         '''
         return cls.user_list
-           
+
+    @classmethod
+    def copy_email(cls,number):
+        user_found = user.find_by_number(number) 
+        pyperclip.copy(user_found.email)   
+
 
 
 
