@@ -28,4 +28,10 @@ def find_user(number):
 
     '''
     return User.find_by_number(number)
+
+def check_existing_users(number);
+    '''
+    function that checks if a user exists using number
     
+    '''
+    return User.user_exist(number)
